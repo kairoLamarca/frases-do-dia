@@ -21,20 +21,29 @@ const Estilos = {
     height: 60,
     width: 60
   },
+  estiloTexto2: {
+    fontSize: 40,
+    backgroundColor: '#2A48FA',
+    height: 60,
+    width: 60
+  },
   estiloView: {
     backgroundColor: 'skyblue',
     height: 300,
-    justifyContent: 'center',//alinhar verticalmente
-    alignItems: 'flex-end'//alinhar horizontalmente
+    justifyContent: 'space-around',//alinhar verticalmente -- center, flex-start, flex-end, space-around, space-between
+    alignItems: 'center',//alinhar horizontalmente
+    flexDirection: 'column'//orientação em colunas ou linhas
   }
 };
 
 //Criar o componente
 const App = () => {
-  const { estiloTexto, estiloView } = Estilos;
+  const { estiloTexto, estiloTexto2, estiloView } = Estilos;
   return (
     <View style={estiloView}>
-      <Text style={estiloTexto}></Text>
+      <Text style={estiloTexto}>A</Text>
+      <Text style={estiloTexto2}>B</Text>
+      <Text style={estiloTexto}>C</Text>
     </View>
   );
 };
