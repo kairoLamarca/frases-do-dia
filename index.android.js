@@ -5,10 +5,14 @@ import { Text, AppRegistry } from 'react-native';
 //Formatações
 const Estilos = {
   estiloTexto: {
-    fontSize: 30,
+    fontSize: 20,
     backgroundColor: '#08509B',
-    padding: 10,
-    margin: 10
+    paddingTop: 15,
+    //shadowColor: '#000',
+    //shadowOffset: { width: 0, height: 15 },
+    //shadowOpacity: 1
+    //shadowRadius: 2
+    elevation: 30
   }
 };
 
