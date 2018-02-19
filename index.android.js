@@ -1,6 +1,6 @@
 //Import
 import React from 'react';
-import { Text, AppRegistry, View } from 'react-native';
+import { Text, AppRegistry, View, Button } from 'react-native';
 
 //Formatações
 const Estilos = {
@@ -35,35 +35,53 @@ const Estilos = {
   //   flexDirection: 'column'//orientação em colunas ou linhas
   // }
 
+  // principal: {
+  //   flex: 1, //1:1 ocupa todo o espaço
+  //   backgroundColor: 'cornflowerblue'
+  // },
+  // topo: {
+  //   flex: 2,//2:11
+  //   backgroundColor: 'brown'
+  // },
+  // conteudo: {
+  //   flex: 8,//8:11
+  //   backgroundColor: 'yellowgreen'
+  // },
+  // rodape: {
+  //   flex: 1,//1:11
+  //   backgroundColor: 'orangered'
+  // }
+
   principal: {
-    flex: 1, //1:1 ocupa todo o espaço
-    backgroundColor: 'cornflowerblue'
-  },
-  topo: {
-    flex: 2,//2:11
-    backgroundColor: 'brown'
-  },
-  conteudo: {
-    flex: 8,//8:11
-    backgroundColor: 'yellowgreen'
-  },
-  rodape: {
-    flex: 1,//1:11
-    backgroundColor: 'orangered'
+    paddingTop: 40
   }
 };
 
+const botaoPressionado = () => {
+  alert('Botão pressionado');
+}
+
 //Criar o componente
 const App = () => {
-  
+
   //const { estiloTexto, estiloTexto2, estiloView } = Estilos;
-  const { principal, topo, conteudo, rodape } = Estilos;
+  //const { principal, topo, conteudo, rodape } = Estilos;
+  const { principal } = Estilos;
 
   return (
+    // <View style={principal}>
+    //   <Text style={topo}>Topo</Text>
+    //   <Text style={conteudo}>Conteudo</Text>
+    //   <Text style={rodape}>Rodapé</Text>
+    // </View>
+
     <View style={principal}>
-      <Text style={topo}>Topo</Text>
-      <Text style={conteudo}>Conteudo</Text>
-      <Text style={rodape}>Rodapé</Text>
+      <Button
+        onPress={botaoPressionado}
+        title="Clique aqui"
+        color="#841584"
+        accessibilityLabel="Clique para abrir as notícias!"
+      />
     </View>
   );
 };
