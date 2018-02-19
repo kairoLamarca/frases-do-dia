@@ -1,6 +1,7 @@
 //Import
 import React from 'react';
-import { Text, AppRegistry, View, Button } from 'react-native';
+//import { Text, AppRegistry, View, Button } from 'react-native';
+import { Text, AppRegistry, View, TouchableOpacity } from 'react-native';
 
 //Formatações
 const Estilos = {
@@ -54,6 +55,20 @@ const Estilos = {
 
   principal: {
     paddingTop: 40
+  },
+  botao: {
+    backgroundColor: '#48BBEC',
+    padding: 10,
+    borderColor: '#1D8EB8',
+    borderWidth: 1,
+    borderRadius: 8,
+    elevation: 8
+  },
+  textoBotao: {
+    color: '#fff',
+    fontSize: 16,
+    fontWeight: 'bold',
+    alignSelf: 'center'
   }
 };
 
@@ -66,7 +81,7 @@ const App = () => {
 
   //const { estiloTexto, estiloTexto2, estiloView } = Estilos;
   //const { principal, topo, conteudo, rodape } = Estilos;
-  const { principal } = Estilos;
+  const { principal, botao, textoBotao } = Estilos;
 
   return (
     // <View style={principal}>
@@ -76,12 +91,16 @@ const App = () => {
     // </View>
 
     <View style={principal}>
-      <Button
+      {/* <Button
         onPress={botaoPressionado}
         title="Clique aqui"
         color="#841584"
         accessibilityLabel="Clique para abrir as notícias!"
-      />
+      /> */}
+
+      <TouchableOpacity style={botao}>
+        <Text style={textoBotao}>Clique aqui</Text>
+      </TouchableOpacity>
     </View>
   );
 };
