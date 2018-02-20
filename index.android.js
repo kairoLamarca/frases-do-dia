@@ -1,7 +1,8 @@
 //Import
 import React from 'react';
 //import { Text, AppRegistry, View, Button } from 'react-native';
-import { Text, AppRegistry, View, TouchableOpacity } from 'react-native';
+//import { Text, AppRegistry, View, TouchableOpacity } from 'react-native';
+import { Text, AppRegistry, View, Image } from 'react-native';
 
 //Formatações
 const Estilos = {
@@ -56,32 +57,39 @@ const Estilos = {
   principal: {
     paddingTop: 40
   },
-  botao: {
-    backgroundColor: '#48BBEC',
-    padding: 10,
-    borderColor: '#1D8EB8',
-    borderWidth: 1,
-    borderRadius: 8,
-    elevation: 8
-  },
-  textoBotao: {
-    color: '#fff',
-    fontSize: 16,
-    fontWeight: 'bold',
-    alignSelf: 'center'
+  // botao: {
+  //   backgroundColor: '#48BBEC',
+  //   padding: 10,
+  //   borderColor: '#1D8EB8',
+  //   borderWidth: 1,
+  //   borderRadius: 8,
+  //   elevation: 8
+  // },
+  // textoBotao: {
+  //   color: '#fff',
+  //   fontSize: 16,
+  //   fontWeight: 'bold',
+  //   alignSelf: 'center'
+  // }
+  imagem: {
+    justifyContent: 'flex-start',
+    padding: 5
   }
+
+
 };
 
-const botaoPressionado = () => {
-  alert('Botão pressionado');
-}
+// const botaoPressionado = () => {
+//   alert('Botão pressionado');
+// }
 
 //Criar o componente
 const App = () => {
 
   //const { estiloTexto, estiloTexto2, estiloView } = Estilos;
   //const { principal, topo, conteudo, rodape } = Estilos;
-  const { principal, botao, textoBotao } = Estilos;
+  //const { principal, botao, textoBotao } = Estilos;
+  const { principal, imagem } = Estilos;
 
   return (
     // <View style={principal}>
@@ -98,9 +106,16 @@ const App = () => {
         accessibilityLabel="Clique para abrir as notícias!"
       /> */}
 
-      <TouchableOpacity style={botao}>
+      {/* <TouchableOpacity style={botao}>
         <Text style={textoBotao}>Clique aqui</Text>
-      </TouchableOpacity>
+      </TouchableOpacity> */}
+
+      <Image style={imagem} source={require('./imgs/uvas.png')}>
+        <Text>Legenda para a foto</Text>
+      </Image>
+      {/* <Image source={{ uri: 'http://www.drsamrobbins.com/wp-content/uploads/2014/03/apples-burn-fat-400x400.jpg' }}
+        style={{ width: 400, height: 400 }}/> */}
+
     </View>
   );
 };
